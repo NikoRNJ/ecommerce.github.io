@@ -1,0 +1,119 @@
+/**
+ * ROADMAP - E-commerce Modular
+ * Proyecto de Prueba - Desarrollo Progresivo
+ */
+
+/* ============================================
+   FASE 1: PREPARACIÓN DEL TERRENO ✅ 
+   ============================================ */
+- [x] README.md con arquitectura modular
+- [x] Estructura CSS modular (8 archivos)
+- [x] Landing page base (index.html)
+- [x] .gitignore configurado
+- [x] Carpetas base creadas (js/, assets/, css/)
+- [x] Commit inicial realizado
+
+/* ============================================
+   FASE 2: NAVBAR Y ESTRUCTURA BASE (PRÓXIMO)
+   ============================================ */
+- [ ] Añadir navbar sticky con logo
+- [ ] Menú de navegación responsive
+- [ ] Icono del carrito con contador
+- [ ] Botón de login/registro
+- [ ] JavaScript para navbar scroll
+- [ ] Estilos CSS para navbar
+
+/* ============================================
+   FASE 3: CATÁLOGO DE PRODUCTOS
+   ============================================ */
+- [ ] Crear productos.html
+- [ ] Grid de productos responsive
+- [ ] Cards de productos con imagen, nombre, precio
+- [ ] Barra de búsqueda y filtros
+- [ ] Botón "Agregar al carrito" en cada producto
+- [ ] CSS para catálogo (productos.css)
+- [ ] JavaScript para filtros (productos.js)
+
+/* ============================================
+   FASE 4: DETALLE DE PRODUCTO
+   ============================================ */
+- [ ] Crear producto-detalle.html
+- [ ] Galería de imágenes del producto
+- [ ] Descripción completa
+- [ ] Selector de cantidad
+- [ ] Botón "Agregar al carrito"
+- [ ] Productos relacionados
+
+/* ============================================
+   FASE 5: CARRITO DE COMPRAS
+   ============================================ */
+- [ ] Crear carrito.html
+- [ ] Modal del carrito (vista rápida)
+- [ ] Lista de productos en el carrito
+- [ ] Actualizar cantidad (+/-)
+- [ ] Eliminar productos
+- [ ] Calcular subtotal y total
+- [ ] LocalStorage para persistencia
+- [ ] JavaScript modular (carrito.js)
+
+/* ============================================
+   FASE 6: SISTEMA DE USUARIOS
+   ============================================ */
+- [ ] Crear login.html
+- [ ] Crear registro.html
+- [ ] Crear perfil.html
+- [ ] Validación de formularios
+- [ ] JavaScript para autenticación (auth.js)
+
+/* ============================================
+   FASE 7: CHECKOUT Y PAGOS
+   ============================================ */
+- [ ] Crear checkout.html
+- [ ] Formulario de datos de envío
+- [ ] Resumen de la orden
+- [ ] Integración con Stripe/MercadoPago
+- [ ] Página de confirmación
+- [ ] JavaScript para proceso de pago
+
+/* ============================================
+   FASE 8: BACKEND/API
+   ============================================ */
+- [ ] Inicializar Node.js + Express
+- [ ] Configurar estructura de backend
+- [ ] Crear modelos de datos
+- [ ] Endpoints de productos
+- [ ] Endpoints de autenticación
+- [ ] Endpoints de pedidos
+- [ ] Configurar base de datos
+
+/* ============================================
+   FASE 9: PANEL DE ADMINISTRACIÓN
+   ============================================ */
+- [ ] Crear admin/dashboard.html
+- [ ] CRUD de productos
+- [ ] Gestión de pedidos
+- [ ] Estadísticas de ventas
+- [ ] Autenticación de admin
+
+/* ============================================
+   FASE 10: MEJORAS Y OPTIMIZACIÓN
+   ============================================ */
+- [ ] Sistema de reviews
+- [ ] Wishlist / Favoritos
+- [ ] Comparador de productos
+- [ ] Notificaciones por email
+- [ ] Optimización de imágenes
+- [ ] PWA (Progressive Web App)
+- [ ] SEO optimization
+
+/* ============================================
+   SIGUIENTE PASO INMEDIATO:
+   ============================================ */
+   
+   → CREAR NAVBAR CON CARRITO DE COMPRAS
+   
+   Archivos a crear/modificar:
+   1. Modificar index.html (añadir navbar)
+   2. Crear css/navbar.css
+   3. Crear js/navbar.js
+   4. Actualizar css/main.css (importar navbar.css)
