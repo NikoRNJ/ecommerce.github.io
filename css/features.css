@@ -1,0 +1,35 @@
+/* Estilos para las cajas de características / servicios */
+
+.feature-box {
+    background: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xxl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.feature-box i {
+    transition: transform var(--transition-normal);
+}
+
+.feature-box:hover i {
+    transform: scale(1.1);
+}
+
+.feature-box h4 {
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.feature-box p {
+    color: var(--gray);
+    line-height: 1.6;
+}

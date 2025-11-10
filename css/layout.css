@@ -1,0 +1,63 @@
+/* Estilos para el layout mixto con imágenes y descripciones */
+
+.image-box {
+    height: 200px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 3rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    transition: transform var(--transition-slow);
+}
+
+.image-box:hover::before {
+    transform: translate(25%, 25%);
+}
+
+.image-box:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.description-box {
+    height: 420px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xxl);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.description-box:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.description-box h3 {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.description-box p {
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,36 @@
+/* Estilos para la sección de contacto */
+
+.contact-section {
+    background: var(--light-gray);
+}
+
+.contact-item {
+    padding: var(--spacing-xl);
+    transition: all var(--transition-normal);
+    border-radius: var(--border-radius-md);
+}
+
+.contact-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    transition: all var(--transition-normal);
+}
+
+.contact-item:hover i {
+    transform: rotate(10deg) scale(1.1);
+    color: var(--primary-color) !important;
+}
+
+.contact-item h5 {
+    color: var(--dark-gray);
+    margin-top: var(--spacing-md);
+}
+
+.contact-item p {
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}

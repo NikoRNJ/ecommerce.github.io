@@ -1,0 +1,57 @@
+/* Estilos para el footer */
+
+footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: var(--spacing-xxl) 0;
+}
+
+footer h5 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    border-radius: 2px;
+}
+
+footer a {
+    transition: all var(--transition-fast);
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    transform: translateX(5px);
+}
+
+footer .social-link {
+    display: inline-block;
+    transition: all var(--transition-normal);
+}
+
+footer .social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+footer hr {
+    opacity: 0.2;
+}
+
+footer .input-group .btn {
+    transition: all var(--transition-normal);
+}
+
+footer .input-group .btn:hover {
+    background: var(--primary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+}

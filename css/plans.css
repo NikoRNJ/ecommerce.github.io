@@ -1,0 +1,66 @@
+/* Estilos para las tarjetas de planes */
+
+.plan-card {
+    border-radius: var(--border-radius-lg);
+    transition: transform var(--transition-normal);
+    height: 100%;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.plan-card:hover {
+    transform: scale(1.05);
+}
+
+.plan-featured {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+    position: relative;
+}
+
+.plan-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.plan-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.plan-card .badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 1px;
+}
+
+.plan-card ul li {
+    padding: 0.5rem 0;
+    transition: padding-left var(--transition-fast);
+}
+
+.plan-card ul li:hover {
+    padding-left: 5px;
+}
+
+.plan-card .btn {
+    transition: all var(--transition-normal);
+    font-weight: 600;
+}
+
+.plan-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.plan-card .display-4 {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
