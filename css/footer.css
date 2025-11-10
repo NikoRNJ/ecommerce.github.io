@@ -1,9 +1,22 @@
 /* Estilos para el footer */
 
 footer {
-    background: var(--dark-gray);
-    color: var(--white);
+    background: var(--bg-secondary);
+    color: var(--gray);
     padding: var(--spacing-xxl) 0;
+    border-top: 2px solid rgba(0, 212, 255, 0.3);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 212, 255, 0.03) 100%);
+    pointer-events: none;
 }
 
 footer h5 {
@@ -13,15 +26,20 @@ footer h5 {
     padding-bottom: var(--spacing-sm);
 }
 
+footer h5 {
+    color: var(--white);
+}
+
 footer h5::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
+    width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 footer a {

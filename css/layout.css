@@ -2,14 +2,16 @@
 
 .image-box {
     height: 200px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 212, 255, 0.3);
     border-radius: var(--border-radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--primary-color);
     font-size: 3rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md), inset 0 0 30px rgba(0, 212, 255, 0.1);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
@@ -32,32 +34,45 @@
 
 .image-box:hover {
     transform: scale(1.02);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg), var(--glow-primary);
+    border-color: var(--primary-color);
+}
+
+.image-box i {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
 }
 
 .description-box {
     height: 420px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 212, 255, 0.3);
     border-radius: var(--border-radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xxl);
-    color: var(--white);
+    color: var(--gray);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
 }
 
 .description-box:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), var(--glow-primary);
+    border-color: var(--primary-color);
 }
 
 .description-box h3 {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    color: var(--white);
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .description-box p {
-    line-height: 1.7;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: var(--gray);
 }

@@ -1,21 +1,43 @@
 /* Estilos para las tarjetas de planes */
 
 .plan-card {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(15px);
     border-radius: var(--border-radius-lg);
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
     height: 100%;
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 212, 255, 0.3);
     overflow: hidden;
+    position: relative;
+}
+
+.plan-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
 }
 
 .plan-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), var(--glow-primary);
+    border-color: var(--primary-color);
+}
+
+.plan-card:hover::after {
+    opacity: 1;
 }
 
 .plan-featured {
     border: 3px solid var(--primary-color);
-    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), var(--glow-strong);
     position: relative;
+    background: rgba(26, 26, 46, 0.9);
 }
 
 .plan-featured::before {
@@ -24,19 +46,34 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 .plan-card .card-body {
     position: relative;
     z-index: 1;
+    background: transparent;
+    border: none;
+}
+
+.plan-card .card-title {
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .plan-card .badge {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-    letter-spacing: 1px;
+    font-size: 0.7rem;
+    padding: 0.5rem 1.2rem;
+    letter-spacing: 2px;
+    background: var(--primary-color);
+    color: var(--black);
+    font-weight: 700;
+    box-shadow: 0 0 20px var(--primary-glow);
+    border-radius: 20px;
 }
 
 .plan-card ul li {
@@ -51,16 +88,63 @@
 .plan-card .btn {
     transition: all var(--transition-normal);
     font-weight: 600;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.plan-card .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transition: left var(--transition-normal);
+    z-index: -1;
+}
+
+.plan-card .btn:hover::before {
+    left: 0;
 }
 
 .plan-card .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    box-shadow: var(--glow-primary);
+    color: var(--black);
+    border-color: var(--primary-color);
+}
+
+.plan-card .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border: none;
+    color: var(--black);
+    box-shadow: var(--glow-primary);
+}
+
+.plan-card .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-strong);
+    color: var(--black);
 }
 
 .plan-card .display-4 {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+    font-weight: 800;
+}
+
+.plan-card .product-image i {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6));
 }

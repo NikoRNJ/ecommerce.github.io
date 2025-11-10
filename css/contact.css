@@ -1,19 +1,22 @@
 /* Estilos para la sección de contacto */
 
 .contact-section {
-    background: var(--light-gray);
+    background: var(--bg-secondary);
 }
 
 .contact-item {
     padding: var(--spacing-xl);
     transition: all var(--transition-normal);
     border-radius: var(--border-radius-md);
+    background: rgba(26, 26, 46, 0.4);
+    border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .contact-item:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-5px);
+    background: rgba(26, 26, 46, 0.7);
+    box-shadow: var(--shadow-md), var(--glow-primary);
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
 }
 
 .contact-item i {
@@ -26,11 +29,15 @@
 }
 
 .contact-item h5 {
-    color: var(--dark-gray);
+    color: var(--white);
     margin-top: var(--spacing-md);
 }
 
 .contact-item p {
     color: var(--gray);
     margin-bottom: 0.5rem;
+}
+
+.contact-item i {
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }

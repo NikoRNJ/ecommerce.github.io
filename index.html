@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Servicios Premium</title>
+    <title>WebFlow - Desarrollo de Páginas Web Profesionales</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -13,39 +13,98 @@
 </head>
 <body>
     
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-code-slash"></i>WebFlow
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planes">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portafolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#contacto" class="btn btn-login">Solicitar Cotización</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal del Carrito -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3><i class="bi bi-cart3 me-2"></i>Mi Carrito</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items se cargarán dinámicamente -->
+            <div class="cart-empty">
+                <i class="bi bi-cart-x"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn-checkout" onclick="window.location.href='checkout.html'">
+                Proceder al Pago
+            </button>
+        </div>
+    </div>
+
     <!-- Hero Section / Inicio -->
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="display-3 fw-bold mb-4">Servicios Premium de Excelencia</h1>
-            <p class="lead fs-4">Ofrecemos soluciones innovadoras y personalizadas para impulsar tu negocio al siguiente nivel. Calidad, compromiso y resultados garantizados.</p>
-            <a href="#planes" class="btn btn-light btn-lg mt-4 px-5">Ver Planes</a>
+            <h1 class="display-2 fw-bold mb-4">Desarrollo Web Profesional</h1>
+            <p class="lead fs-4">Creamos páginas web modernas, rápidas y optimizadas para tu negocio. Con integración de pasarela de pagos Flow.</p>
+            <a href="#planes" class="btn btn-light btn-lg mt-4 px-5 me-3">Ver Planes</a>
+            <a href="#portafolio" class="btn btn-outline-light btn-lg mt-4 px-5">Ver Portafolio</a>
         </div>
     </section>
 
-    <!-- Sección de Calidad del Servicio - 3 Cajas Horizontales -->
+    <!-- Sección de Características - 3 Cajas Horizontales -->
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5 fw-bold">¿Por Qué Elegirnos?</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="feature-box text-center">
-                        <i class="bi bi-award-fill text-primary" style="font-size: 3rem;"></i>
-                        <h4 class="mt-3 mb-3">Calidad Certificada</h4>
-                        <p class="text-muted">Nuestros servicios cuentan con certificaciones internacionales que garantizan los más altos estándares de calidad en cada proyecto.</p>
+                        <i class="bi bi-lightning-charge-fill text-primary" style="font-size: 3rem;"></i>
+                        <h4 class="mt-3 mb-3">Desarrollo Rápido</h4>
+                        <p class="text-muted">Entregamos tu página web en tiempo récord sin comprometer la calidad. Optimización y rendimiento garantizados.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box text-center">
-                        <i class="bi bi-people-fill text-success" style="font-size: 3rem;"></i>
-                        <h4 class="mt-3 mb-3">Equipo Experto</h4>
-                        <p class="text-muted">Contamos con profesionales altamente capacitados con más de 10 años de experiencia en el sector, listos para ayudarte.</p>
+                        <i class="bi bi-phone-fill text-success" style="font-size: 3rem;"></i>
+                        <h4 class="mt-3 mb-3">100% Responsive</h4>
+                        <p class="text-muted">Diseños adaptables a todos los dispositivos. Tu página se verá perfecta en móviles, tablets y computadoras.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box text-center">
-                        <i class="bi bi-clock-fill text-warning" style="font-size: 3rem;"></i>
-                        <h4 class="mt-3 mb-3">Soporte 24/7</h4>
-                        <p class="text-muted">Atención al cliente disponible las 24 horas del día, los 7 días de la semana. Estamos aquí cuando nos necesites.</p>
+                        <i class="bi bi-credit-card-fill text-warning" style="font-size: 3rem;"></i>
+                        <h4 class="mt-3 mb-3">Integración Flow</h4>
+                        <p class="text-muted">Pasarela de pagos Flow completamente integrada y funcional para que vendas desde el primer día.</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +112,7 @@
     </section>
 
     <!-- Sección de Layout Mixto -->
-    <section class="py-5">
+    <section id="portafolio" class="py-5">
         <div class="container">
             <div class="row g-4">
                 <!-- Columna Izquierda -->
@@ -61,15 +120,15 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="image-box">
-                                <i class="bi bi-graph-up-arrow"></i>
+                                <i class="bi bi-globe2"></i>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="description-box">
                                 <div>
-                                    <h3 class="mb-4 fw-bold">Crecimiento Sostenible</h3>
-                                    <p class="fs-5">Implementamos estrategias probadas que han ayudado a más de 500 empresas a crecer de manera sostenible. Nuestro enfoque se basa en análisis de datos, optimización continua y resultados medibles.</p>
-                                    <p class="fs-5 mt-3">Trabajamos contigo para desarrollar un plan personalizado que se adapte a tus necesidades específicas y objetivos de negocio.</p>
+                                    <h3 class="mb-4 fw-bold">Diseño Moderno y Profesional</h3>
+                                    <p class="fs-5">Creamos sitios web con las últimas tendencias en diseño UI/UX. Interfaces limpias, intuitivas y optimizadas para conversión.</p>
+                                    <p class="fs-5 mt-3">Cada proyecto es único y personalizado según tu identidad de marca y objetivos comerciales.</p>
                                 </div>
                             </div>
                         </div>
@@ -81,15 +140,15 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="image-box">
-                                <i class="bi bi-shield-check"></i>
+                                <i class="bi bi-rocket-takeoff"></i>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="description-box">
                                 <div>
-                                    <h3 class="mb-4 fw-bold">Seguridad Garantizada</h3>
-                                    <p class="fs-5">La protección de tus datos es nuestra prioridad. Utilizamos tecnología de encriptación de última generación y seguimos protocolos de seguridad internacionales.</p>
-                                    <p class="fs-5 mt-3">Auditorías regulares, respaldos automáticos y sistemas de recuperación ante desastres garantizan que tu información esté siempre protegida y disponible.</p>
+                                    <h3 class="mb-4 fw-bold">Tecnología de Vanguardia</h3>
+                                    <p class="fs-5">Utilizamos las tecnologías más modernas: HTML5, CSS3, JavaScript, React, y frameworks potentes para garantizar velocidad y seguridad.</p>
+                                    <p class="fs-5 mt-3">SEO optimizado, carga ultra-rápida y código limpio que te posicionará en los primeros lugares de Google.</p>
                                 </div>
                             </div>
                         </div>
@@ -99,68 +158,98 @@
         </div>
     </section>
 
-    <!-- Sección de Planes -->
+    <!-- Sección de Planes de Desarrollo Web -->
     <section id="planes" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Nuestros Planes</h2>
+            <h2 class="text-center mb-3 fw-bold">Nuestros Planes</h2>
+            <p class="text-center text-muted mb-5 fs-5">Elige el plan perfecto para tu negocio • Pago único • Sin mensualidades</p>
             <div class="row g-4">
                 <!-- Plan Común -->
                 <div class="col-md-4">
-                    <div class="card plan-card shadow">
+                    <div class="card plan-card shadow h-100">
                         <div class="card-body text-center p-4">
+                            <div class="product-image mb-3">
+                                <i class="bi bi-file-code" style="font-size: 4rem;"></i>
+                            </div>
                             <h3 class="card-title fw-bold mb-3">Plan Común</h3>
-                            <div class="display-4 fw-bold text-primary mb-3">$29<small class="fs-5 text-muted">/mes</small></div>
+                            <div class="display-4 fw-bold text-primary mb-3">$299.990</div>
                             <p class="text-muted mb-4">Ideal para emprendedores y pequeños negocios</p>
                             <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hasta 5 usuarios</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 GB de almacenamiento</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte por email</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Actualizaciones básicas</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Panel de control</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Landing Page profesional</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hasta 5 secciones</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Diseño responsive</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Formulario de contacto</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Integración redes sociales</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hosting 1 año gratis</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dominio .cl incluido</li>
                             </ul>
-                            <button class="btn btn-outline-primary btn-lg w-100">Comenzar Ahora</button>
+                            <button class="btn btn-primary btn-lg w-100 add-to-cart" 
+                                    data-id="1" 
+                                    data-name="Plan Común" 
+                                    data-price="299990">
+                                <i class="bi bi-cart-plus me-2"></i>Contratar Plan
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Plan Recurrente (Destacado) -->
                 <div class="col-md-4">
-                    <div class="card plan-card plan-featured shadow-lg">
+                    <div class="card plan-card plan-featured shadow-lg h-100">
                         <div class="card-body text-center p-4">
                             <div class="badge bg-primary mb-3">MÁS POPULAR</div>
+                            <div class="product-image mb-3">
+                                <i class="bi bi-globe" style="font-size: 4rem;"></i>
+                            </div>
                             <h3 class="card-title fw-bold mb-3">Plan Recurrente</h3>
-                            <div class="display-4 fw-bold text-primary mb-3">$59<small class="fs-5 text-muted">/mes</small></div>
+                            <div class="display-4 fw-bold text-primary mb-3">$599.990</div>
                             <p class="text-muted mb-4">Perfecto para empresas en crecimiento</p>
                             <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hasta 20 usuarios</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>50 GB de almacenamiento</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte prioritario 24/7</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Todas las actualizaciones</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Analytics avanzado</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Integraciones premium</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Todo del Plan Común +</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hasta 10 páginas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Blog/Noticias integrado</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Panel administrador</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>SEO optimizado</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Integración Flow (Pagos)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Analytics incluido</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte 6 meses</li>
                             </ul>
-                            <button class="btn btn-primary btn-lg w-100">Comenzar Ahora</button>
+                            <button class="btn btn-primary btn-lg w-100 add-to-cart" 
+                                    data-id="2" 
+                                    data-name="Plan Recurrente" 
+                                    data-price="599990">
+                                <i class="bi bi-cart-plus me-2"></i>Contratar Plan
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Plan Avanzado -->
                 <div class="col-md-4">
-                    <div class="card plan-card shadow">
+                    <div class="card plan-card shadow h-100">
                         <div class="card-body text-center p-4">
+                            <div class="product-image mb-3">
+                                <i class="bi bi-rocket-takeoff" style="font-size: 4rem;"></i>
+                            </div>
                             <h3 class="card-title fw-bold mb-3">Plan Avanzado</h3>
-                            <div class="display-4 fw-bold text-primary mb-3">$99<small class="fs-5 text-muted">/mes</small></div>
-                            <p class="text-muted mb-4">Para empresas que necesitan lo mejor</p>
+                            <div class="display-4 fw-bold text-primary mb-3">$999.990</div>
+                            <p class="text-muted mb-4">Solución completa para e-commerce</p>
                             <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Usuarios ilimitados</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>200 GB de almacenamiento</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte dedicado 24/7</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Consultoría personalizada</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>API completa</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Personalización completa</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>SLA garantizado 99.9%</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Todo del Plan Recurrente +</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>E-commerce completo</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Carrito de compras</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Gestión de inventario</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Múltiples métodos de pago</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Sistema de usuarios</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Diseño 100% personalizado</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Soporte 1 año premium</li>
                             </ul>
-                            <button class="btn btn-outline-primary btn-lg w-100">Comenzar Ahora</button>
+                            <button class="btn btn-primary btn-lg w-100 add-to-cart" 
+                                    data-id="3" 
+                                    data-name="Plan Avanzado" 
+                                    data-price="999990">
+                                <i class="bi bi-cart-plus me-2"></i>Contratar Plan
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -169,7 +258,7 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section class="py-5">
+    <section id="contacto" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 fw-bold">Contacta con Nosotros</h2>
             <div class="row justify-content-center">
@@ -187,8 +276,8 @@
                             <div class="contact-item">
                                 <i class="bi bi-envelope-fill text-primary" style="font-size: 2.5rem;"></i>
                                 <h5 class="mt-3 mb-2">Email</h5>
-                                <p class="text-muted">info@servicios.com</p>
-                                <p class="text-muted">soporte@servicios.com</p>
+                                <p class="text-muted">contacto@webflow.cl</p>
+                                <p class="text-muted">soporte@webflow.cl</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -213,8 +302,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5 class="fw-bold mb-3">Servicios Premium</h5>
-                    <p>Transformando negocios a través de soluciones innovadoras y servicios de calidad superior.</p>
+                    <h5 class="fw-bold mb-3">WebFlow</h5>
+                    <p>Desarrollo web profesional con integración de pagos Flow. Tu negocio online comienza aquí.</p>
                     <div class="mt-3">
                         <a href="#" class="social-link text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
                         <a href="#" class="social-link text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
@@ -225,29 +314,29 @@
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold mb-3">Enlaces Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
                         <li class="mb-2"><a href="#planes" class="text-white text-decoration-none">Planes</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sobre Nosotros</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#portafolio" class="text-white text-decoration-none">Portafolio</a></li>
+                        <li class="mb-2"><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">Newsletter</h5>
-                    <p>Suscríbete para recibir noticias y ofertas especiales</p>
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Tu email">
-                        <button class="btn btn-light" type="button">Suscribirse</button>
-                    </div>
+                    <h5 class="fw-bold mb-3">Contacto Directo</h5>
+                    <p><i class="bi bi-envelope me-2"></i>contacto@webflow.cl</p>
+                    <p><i class="bi bi-phone me-2"></i>+56 9 1234 5678</p>
                 </div>
             </div>
             <hr class="my-4 bg-light">
             <div class="text-center">
-                <p class="mb-0">&copy; 2025 Servicios Premium. Todos los derechos reservados.</p>
+                <p class="mb-0">&copy; 2025 WebFlow. Todos los derechos reservados. | Desarrollo Web Profesional</p>
             </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Modular -->
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

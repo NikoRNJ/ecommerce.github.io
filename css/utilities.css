@@ -10,8 +10,12 @@
 }
 
 /* Backgrounds */
+.bg-light {
+    background: var(--bg-secondary) !important;
+}
+
 .bg-gradient-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 .bg-gradient-secondary {
@@ -19,7 +23,12 @@
 }
 
 .bg-gradient-accent {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+/* Textos */
+.text-muted {
+    color: var(--gray) !important;
 }
 
 /* Animaciones */

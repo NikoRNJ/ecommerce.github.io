@@ -1,0 +1,155 @@
+/* Estilos para el Navbar */
+
+.navbar-custom {
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 212, 255, 0.1);
+    padding: 1rem 0;
+    transition: all var(--transition-normal);
+}
+
+.navbar-custom.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    transition: transform var(--transition-fast);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--white) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all var(--transition-normal);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.btn-login {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.btn-login:hover {
+    background: var(--primary-color);
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--white);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--danger-color);
+    color: var(--white);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+.search-box {
+    position: relative;
+    max-width: 300px;
+}
+
+.search-box input {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    padding-right: 2.5rem;
+    transition: all var(--transition-fast);
+}
+
+.search-box input:focus {
+    background: rgba(255,255,255,0.2);
+    border-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.search-box .search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--dark-gray);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: var(--border-radius-md);
+    }
+    
+    .search-box {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}

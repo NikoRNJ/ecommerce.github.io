@@ -1,26 +1,34 @@
 /* Variables CSS - Colores, tamaños y configuraciones globales */
 
 :root {
-    /* Colores Principales */
-    --primary-color: #667eea;
-    --primary-dark: #764ba2;
-    --secondary-color: #f093fb;
-    --secondary-dark: #f5576c;
-    --accent-color: #4facfe;
-    --accent-light: #00f2fe;
+    /* Paleta Oscura Elegante con Azul Eléctrico */
+    --primary-color: #00d4ff;        /* Azul eléctrico brillante */
+    --primary-dark: #0099cc;         /* Azul eléctrico oscuro */
+    --primary-glow: rgba(0, 212, 255, 0.3);
+    --secondary-color: #1a1a2e;      /* Azul oscuro profundo */
+    --secondary-dark: #0f0f1e;       /* Casi negro azulado */
+    --accent-color: #00ffff;         /* Cyan neón */
+    --accent-dark: #00b8d4;
     
     /* Colores de Estado */
-    --success-color: #28a745;
-    --warning-color: #ffc107;
-    --danger-color: #dc3545;
-    --info-color: #17a2b8;
+    --success-color: #00ff88;
+    --warning-color: #ffaa00;
+    --danger-color: #ff4458;
+    --info-color: #00d4ff;
     
-    /* Colores Neutrales */
+    /* Escala de Grises Oscuros */
     --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --gray: #6c757d;
-    --dark-gray: #2c3e50;
+    --light-gray: #2a2a3e;
+    --gray: #8892a6;
+    --dark-gray: #16213e;
+    --darker-gray: #0f1419;
     --black: #000000;
+    
+    /* Fondos */
+    --bg-primary: #0f0f1e;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+    --bg-card: rgba(26, 26, 46, 0.8);
     
     /* Tipografía */
     --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,10 +50,13 @@
     --border-radius-md: 10px;
     --border-radius-lg: 15px;
     
-    /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+    /* Sombras con Glow */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.6);
+    --glow-primary: 0 0 20px var(--primary-glow);
+    --glow-accent: 0 0 30px rgba(0, 255, 255, 0.5);
+    --glow-strong: 0 0 40px var(--primary-color);
     
     /* Transiciones */
     --transition-fast: 0.2s ease;

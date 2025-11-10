@@ -1,35 +1,57 @@
 /* Estilos para las cajas de características / servicios */
 
 .feature-box {
-    background: var(--white);
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
     border-radius: var(--border-radius-md);
     padding: var(--spacing-xxl);
     box-shadow: var(--shadow-md);
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
     height: 100%;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 212, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
 }
 
 .feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), var(--glow-primary);
     border-color: var(--primary-color);
 }
 
+.feature-box:hover::before {
+    opacity: 1;
+}
+
 .feature-box i {
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
 .feature-box:hover i {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 20px var(--primary-color));
 }
 
 .feature-box h4 {
-    color: var(--dark-gray);
+    color: var(--white);
     font-weight: 600;
+    margin-top: 1.5rem;
 }
 
 .feature-box p {
     color: var(--gray);
-    line-height: 1.6;
+    line-height: 1.8;
 }
